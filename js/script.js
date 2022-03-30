@@ -65,13 +65,42 @@
 
 // })
 
-
+// definisco le variabili importanti
 let currentindex = 0;
 const listaImmagini = document.getElementsByClassName('items');
+const listaMiniImmagini = document.getElementsByClassName('mini-items');
+const circle = document.getElementsByClassName('circle');
+
+// collegamento hai bottoni scorrimento immagini
 const next = document.querySelector('.avanti');
-console.log(next)
+
 next.addEventListener('click' , function(){
-    listaImmagini[currentindex].classList.remove('.active')
-    currentindex += 1; 
-})
+    listaImmagini[currentindex].classList.remove('active');
+    listaMiniImmagini[currentindex].classList.remove('active');
+    circle[currentindex].classList.remove('active');
+    currentindex += 1 ;
+    if(currentindex > 4) {
+        currentindex = 0
+    }
+    listaImmagini[currentindex].classList.add('active');
+    listaMiniImmagini[currentindex].classList.add('active');
+    circle[currentindex].classList.add('active');
+
+});
+
+const prev = document.querySelector('.indietro');
+console.log(prev)
+prev.addEventListener('click' , function(){
+    listaImmagini[currentindex].classList.remove('active');
+    listaMiniImmagini[currentindex].classList.remove('active');
+    circle[currentindex].classList.remove('active');
+    currentindex -= 1;
+    if(currentindex < 0) {
+        currentindex = 4
+    }
+    listaImmagini[currentindex].classList.add('active');
+    listaMiniImmagini[currentindex].classList.add('active');
+    circle[currentindex].classList.add('active');
+});
+
     
