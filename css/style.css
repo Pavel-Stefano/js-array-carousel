@@ -11,17 +11,8 @@
 /* contenitore immagini */
 .container {
     margin-top: 60px;
-    height: 100vh;
     position: relative;
 }
-
-/* .slider {
-    width: 70vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 
 .items-container, .items.active {
     width: 100%;
@@ -81,8 +72,6 @@
 .avanti:hover i {
     color: #444;
 }
-
-
 
 .indietro {
     top: 10px;
